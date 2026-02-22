@@ -1,0 +1,85 @@
+@import "./variables"; 
+
+@import "nes.css/css/nes.min.css";
+@import "isometricsass/src/sass/_isometric.sass";
+@import "./blocks.css";
+
+:root {
+  --bg-color: #1a0933;
+  --purple-light: #9d50bb;
+  --purple-dark: #4b2c85;
+}
+
+body {
+  background-color: var(--bg-color);
+  padding: 50px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.isometric-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 100px;
+    perspective: 1000px; // Esto ayuda al efecto 3D 
+  } 
+.iso-item {
+  transition: transform 0.3s ease;
+  transform: rotateX(20deg) rotateZ(-20deg); 
+    
+    &:hover {
+        transform: rotateX(-10deg) rotateZ(+10deg) translateY(-20px);
+        filter: brightness(1.2);
+    }
+}
+
+.portafolio-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+.folder-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.folder-tab {
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    font-size: 0.8rem;
+    
+    &.active {
+        background-color: var(--purple-light) !important;
+        transform: translateX(25px);
+        box-shadow: -5px 5px 0px black;
+    }
+
+    &:hover:not(.active) {
+        transform: translateX(10px);
+    }
+}
+
+.focus-area {
+    perspective: 1000px;
+}
+
+.animate-focus {
+    animation: folderIn 0.5s ease-out forwards;
+}
+
+@keyframes folderIn {
+    from {
+        opacity: 0;
+        transform: translateX(100px) rotateY(-20deg);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) rotateY(-10deg);
+    }
+}
