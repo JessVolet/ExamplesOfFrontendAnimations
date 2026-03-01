@@ -1,1 +1,56 @@
+/* =========================================================================
+   VARIABLES DE ESTILO GLOBALES (THEME CONFIGURATION)
+   =========================================================================
+   Modifica los valores aquí y todo el portafolio se actualizará automáticamente.
+   ========================================================================= */
 
+:root {
+    /* -----------------------------------------------------------------------
+     1. COLORES PRINCIPALES (BACKGROUNDS)
+     ----------------------------------------------------------------------- */
+    /* Color de fondo principal donde van los paneles. Actualmente: Oscuro tipo Synthwave */
+    --bg-color: #0d0f17;
+
+    /* Color de fondo del panel de información / barra lateral izquierda */
+    --bg-sidebar: #131520;
+
+
+    /* -----------------------------------------------------------------------
+     2. COLORES DE ACENTO (HIGHLIGHTS & NEONS)
+     ----------------------------------------------------------------------- */
+    /* Color morado principal usado en títulos, avatares, bordes y sombras 3D */
+    --accent-purple: #9d5bb5;
+
+    /* Color azul eléctrico para detalles secundarios y animaciones (cuando haces hover) */
+    --accent-blue: #3b82f6;
+
+    /* Color verde principalmente para badges y acentos exitosos */
+    --accent-green: #10b981;
+
+    /* Color verde clásico de terminal hacker para los "➜" y bash scripts */
+    --term-prompt: #22c55e;
+
+
+    /* -----------------------------------------------------------------------
+     3. TEXTOS Y TIPOGRAFÍAS
+     ----------------------------------------------------------------------- */
+    /* Color de los textos normales (Párrafos, descripciones). Blanco/Gris claro */
+    --text-main: #e2e8f0;
+
+
+    /* -----------------------------------------------------------------------
+     4. VARIABLES PARA BLOCKS.CSS (Módulo de tarjetas retro)
+     ----------------------------------------------------------------------- */
+
+    /* Color del texto dentro de las tarjetas "Block" */
+    --block-text-color: #e2e8f0;
+
+    /* Color de fondo de las tarjetas "Block" */
+    --block-background-color: #1a1525;
+
+    /* Color de acento de las tarjetas "Block" (Para un bloque de estilo .accent) */
+    --block-accent-color: #9d5bb5;
+
+    /* Color de la sombra gruesa que crea blocks.css por debajo de cada panel */
+    --block-shadow-color: #9d5bb5;
+}
